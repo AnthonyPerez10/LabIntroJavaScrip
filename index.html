@@ -18,6 +18,102 @@
             Donde se mostrarán ejemplos y teoría de cada uno de ellos.</p>
     </div>
 
+           <!-- Introducción a JavaScript -->
+        <h2>a. Introducción a JavaScript</h2>
+        <p>JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos, ampliamente utilizado para crear interactividad en páginas web. Permite manipular el DOM (Document Object Model), manejar eventos y realizar operaciones del lado del cliente. Es esencial para el desarrollo web moderno, complementando HTML y CSS.</p>
+        
+        <h3>i. Conceptos de programación</h3>
+        <p>La programación en JavaScript se basa en conceptos fundamentales como variables (para almacenar datos), funciones (bloques de código reutilizables), objetos (estructuras que agrupan propiedades y métodos), y el paradigma de programación funcional (como el uso de funciones de orden superior). JavaScript es dinámico, lo que significa que las variables no necesitan un tipo fijo, y soporta tanto programación imperativa como funcional.</p>
+        
+        <h2>b. Sintaxis</h2>
+        <p>La sintaxis de JavaScript es flexible y similar a lenguajes como C o Java. Incluye declaraciones, expresiones, y el uso de llaves `{}` para bloques de código. Es sensible a mayúsculas y minúsculas, y las instrucciones terminan con punto y coma (`;`), aunque no siempre es obligatorio.</p>
+        
+        <h3>i. Tipos de datos</h3>
+        <p>JavaScript tiene tipos de datos primitivos y complejos. Los primitivos incluyen números, cadenas, booleanos, etc., mientras que los complejos son objetos y arreglos.</p>
+        
+        <h4>1. Numbers</h4>
+        <p>Representan valores numéricos, enteros o flotantes. JavaScript no distingue entre enteros y flotantes.</p>
+        <pre>
+            let edad = 25; // Entero
+            let precio = 19.99; // Flotante
+            console.log(edad + precio); // 44.99
+        </pre>
+        
+        <h4>2. Strings</h4>
+        <p>Cadenas de texto, delimitadas por comillas simples o dobles.</p>
+        <pre>
+            let nombre = "Ana";
+            let saludo = 'Hola, ' + nombre;
+            console.log(saludo); // "Hola, Ana"
+        </pre>
+        
+        <h4>3. Arrays</h4>
+        <p>Colecciones ordenadas de elementos, que pueden ser de cualquier tipo.</p>
+        <pre>
+            let frutas = ["manzana", "banana", "naranja"];
+            console.log(frutas[1]); // "banana"
+            frutas.push("pera"); // Agrega un elemento
+        </pre>
+        
+        <h4>4. Objects (JSON, Object Destructure, Spread Operator, etc)</h4>
+        <p>Objetos son colecciones de pares clave-valor. JSON es un formato de texto para representar objetos. La destructuración permite extraer propiedades fácilmente, y el operador spread (`...`) copia o fusiona objetos.</p>
+        <pre>
+            // Objeto básico
+            let persona = { nombre: "Juan", edad: 30 };
+            
+            // JSON
+            let jsonPersona = JSON.stringify(persona); // Convierte a string JSON
+            console.log(jsonPersona); // '{"nombre":"Juan","edad":30}'
+            
+            // Destructuración
+            let { nombre, edad } = persona;
+            console.log(nombre); // "Juan"
+            
+            // Spread Operator
+            let copiaPersona = { ...persona, ciudad: "Madrid" };
+            console.log(copiaPersona); // { nombre: "Juan", edad: 30, ciudad: "Madrid" }
+        </pre>
+        
+        <h3>ii. Operadores</h3>
+        <p>Operadores realizan operaciones en valores. Incluyen aritméticos (`+`, `-`, `*`, `/`), de comparación (`==`, `===`, `>`, `<`), lógicos (`&&`, `||`, `!`), y de asignación (`=`, `+=`).</p>
+        <pre>
+            let a = 5;
+            let b = 10;
+            console.log(a + b); // 15 (aritmético)
+            console.log(a === 5); // true (comparación estricta)
+            console.log(a > 3 && b < 20); // true (lógico)
+        </pre>
+        
+        <h3>iii. Estructuras de control</h3>
+        <p>Controlan el flujo del programa: condicionales (`if-else`), bucles (`for`, `while`), y switches.</p>
+        <pre>
+            // Condicional
+            let numero = 10;
+            if (numero > 5) {
+                console.log("Mayor que 5");
+            } else {
+                console.log("Menor o igual a 5");
+            }
+            
+            // Bucle for
+            for (let i = 0; i < 3; i++) {
+                console.log(i); // 0, 1, 2
+            }
+            
+            // Switch
+            let dia = "lunes";
+            switch (dia) {
+                case "lunes":
+                    console.log("Inicio de semana");
+                    break;
+                default:
+                    console.log("Otro día");
+            }
+        </pre>
+    </div>
+
+
+
     <!-- Preguntas de 4 hacia adelante -->
     <!-- FUNCIONES MAP, REDUCE, FILTER -->
     <div class="caja">
