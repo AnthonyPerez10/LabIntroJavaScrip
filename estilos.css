@@ -1,0 +1,93 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos para la introducción */
+.introducción {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.introducción h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.introducción h2, .introducción h3, .introducción h4 {
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+/* Estilos para las cajas */
+.caja {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007bff;
+}
+
+.caja h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.caja ul {
+    margin-left: 20px;
+}
+
+.caja pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+/* Estilos para botones y formularios */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .caja, .introducción {
+        padding: 15px;
+    }
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
