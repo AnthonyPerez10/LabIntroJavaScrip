@@ -9,9 +9,15 @@
 <body>
     <!-- Anthony Perez, Brandon Arcia -->
 
+    <div class="caja">
+        <h1> Introducción a JavaScript </h1>
+        <h3>Integrantes: Brandom Arcia, Anthony Perez </h3>
+    </div>
+    
+
     <!-- Clase de introducción -->
     <div class="introducción">
-        <h1>introducción</h1>
+        <h1>Introducción</h1>
         <p> El uso de javascript se utiliza para el desarrollo de páginas web más interactivas para el usuario, donde se
             puede agregar un diseño más moderno y esencial a las páginas web, en este documento se hablará sobre los
             principales conceptos de JavaScript como se puede mencionar Tipos de datos, operadores, clases, estructuras
@@ -19,44 +25,55 @@
             Donde se mostrarán ejemplos y teoría de cada uno de ellos.</p>
     </div>
 
-           <!-- Introducción a JavaScript -->
-        <h2>a. Introducción a JavaScript</h2>
-        <p>JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos, ampliamente utilizado para crear interactividad en páginas web. Permite manipular el DOM (Document Object Model), manejar eventos y realizar operaciones del lado del cliente. Es esencial para el desarrollo web moderno, complementando HTML y CSS.</p>
+        <!-- Introducción a JavaScript -->
+         <div class="caja">
+            <h2>a. Introducción a JavaScript</h2>
+            <p>JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos, ampliamente utilizado para crear interactividad en páginas web. Permite manipular el DOM (Document Object Model), manejar eventos y realizar operaciones del lado del cliente. Es esencial para el desarrollo web moderno, complementando HTML y CSS.</p>
+            
+            <h3>i. Conceptos de programación</h3>
+            <p>La programación en JavaScript se basa en conceptos fundamentales como variables (para almacenar datos), funciones (bloques de código reutilizables), objetos (estructuras que agrupan propiedades y métodos), y el paradigma de programación funcional (como el uso de funciones de orden superior). JavaScript es dinámico, lo que significa que las variables no necesitan un tipo fijo, y soporta tanto programación imperativa como funcional.</p>
+            
+            <h2>b. Sintaxis</h2>
+            <p>La sintaxis de JavaScript es flexible y similar a lenguajes como C o Java. Incluye declaraciones, expresiones, y el uso de llaves `{}` para bloques de código. Es sensible a mayúsculas y minúsculas, y las instrucciones terminan con punto y coma (`;`), aunque no siempre es obligatorio.</p>
+        </div>
+
+        <div class="caja">
+            <h3>i. Tipos de datos</h3>
+            <p>JavaScript tiene tipos de datos primitivos y complejos. Los primitivos incluyen números, cadenas, booleanos, etc., mientras que los complejos son objetos y arreglos.</p>
+        </div>
         
-        <h3>i. Conceptos de programación</h3>
-        <p>La programación en JavaScript se basa en conceptos fundamentales como variables (para almacenar datos), funciones (bloques de código reutilizables), objetos (estructuras que agrupan propiedades y métodos), y el paradigma de programación funcional (como el uso de funciones de orden superior). JavaScript es dinámico, lo que significa que las variables no necesitan un tipo fijo, y soporta tanto programación imperativa como funcional.</p>
+        <div class="caja">
+            <h4>1. Numbers</h4>
+             <p>Representan valores numéricos, enteros o flotantes. JavaScript no distingue entre enteros y flotantes.</p>
+            <pre>
+                let edad = 25; // Entero
+                let precio = 19.99; // Flotante
+                console.log(edad + precio); // 44.99
+            </pre>
+        </div>
         
-        <h2>b. Sintaxis</h2>
-        <p>La sintaxis de JavaScript es flexible y similar a lenguajes como C o Java. Incluye declaraciones, expresiones, y el uso de llaves `{}` para bloques de código. Es sensible a mayúsculas y minúsculas, y las instrucciones terminan con punto y coma (`;`), aunque no siempre es obligatorio.</p>
+        <div class="caja">
+            <h4>2. Strings</h4>
+            <p>Cadenas de texto, delimitadas por comillas simples o dobles.</p>
+            <pre>
+                let nombre = "Ana";
+                let saludo = 'Hola, ' + nombre;
+                console.log(saludo); // "Hola, Ana"
+             </pre>
+        </div>
         
-        <h3>i. Tipos de datos</h3>
-        <p>JavaScript tiene tipos de datos primitivos y complejos. Los primitivos incluyen números, cadenas, booleanos, etc., mientras que los complejos son objetos y arreglos.</p>
+        <div class="caja">
+            <h4>3. Arrays</h4>
+            <p>Colecciones ordenadas de elementos, que pueden ser de cualquier tipo.</p>
+            <pre>
+                let frutas = ["manzana", "banana", "naranja"];
+                console.log(frutas[1]); // "banana"
+                frutas.push("pera"); // Agrega un elemento
+            </pre>
+        </div>
         
-        <h4>1. Numbers</h4>
-        <p>Representan valores numéricos, enteros o flotantes. JavaScript no distingue entre enteros y flotantes.</p>
-        <pre>
-            let edad = 25; // Entero
-            let precio = 19.99; // Flotante
-            console.log(edad + precio); // 44.99
-        </pre>
-        
-        <h4>2. Strings</h4>
-        <p>Cadenas de texto, delimitadas por comillas simples o dobles.</p>
-        <pre>
-            let nombre = "Ana";
-            let saludo = 'Hola, ' + nombre;
-            console.log(saludo); // "Hola, Ana"
-        </pre>
-        
-        <h4>3. Arrays</h4>
-        <p>Colecciones ordenadas de elementos, que pueden ser de cualquier tipo.</p>
-        <pre>
-            let frutas = ["manzana", "banana", "naranja"];
-            console.log(frutas[1]); // "banana"
-            frutas.push("pera"); // Agrega un elemento
-        </pre>
-        
-        <h4>4. Objects (JSON, Object Destructure, Spread Operator, etc)</h4>
+        <div class="caja">
+            <h4>4. Objects (JSON, Object Destructure, Spread Operator, etc)</h4>
         <p>Objetos son colecciones de pares clave-valor. JSON es un formato de texto para representar objetos. La destructuración permite extraer propiedades fácilmente, y el operador spread (`...`) copia o fusiona objetos.</p>
         <pre>
             // Objeto básico
@@ -74,47 +91,49 @@
             let copiaPersona = { ...persona, ciudad: "Madrid" };
             console.log(copiaPersona); // { nombre: "Juan", edad: 30, ciudad: "Madrid" }
         </pre>
+        </div>
         
-        <h3>ii. Operadores</h3>
-        <p>Operadores realizan operaciones en valores. Incluyen aritméticos (`+`, `-`, `*`, `/`), de comparación (`==`, `===`, `>`, `<`), lógicos (`&&`, `||`, `!`), y de asignación (`=`, `+=`).</p>
-        <pre>
-            let a = 5;
-            let b = 10;
-            console.log(a + b); // 15 (aritmético)
-            console.log(a === 5); // true (comparación estricta)
-            console.log(a > 3 && b < 20); // true (lógico)
-        </pre>
+        <div class="caja">
+            <h3>ii. Operadores</h3>
+            <p>Operadores realizan operaciones en valores. Incluyen aritméticos (`+`, `-`, `*`, `/`), de comparación (`==`, `===`, `>`, `<`), lógicos (`&&`, `||`, `!`), y de asignación (`=`, `+=`).</p>
+            <pre>
+                let a = 5;
+                let b = 10;
+                console.log(a + b); // 15 (aritmético)
+                console.log(a === 5); // true (comparación estricta)
+                console.log(a > 3 && b < 20); // true (lógico)
+            </pre>
+        </div>
+
+        <div class="caja">
+            <h3>iii. Estructuras de control</h3>
+            <p>Controlan el flujo del programa: condicionales (`if-else`), bucles (`for`, `while`), y switches.</p>
+            <pre>
+                // Condicional
+                let numero = 10;
+                if (numero > 5) {
+                    console.log("Mayor que 5");
+                } else {
+                    console.log("Menor o igual a 5");
+                }
+                
+                // Bucle for
+                for (let i = 0; i < 3; i++) {
+                    console.log(i); // 0, 1, 2
+                }
+                
+                // Switch
+                let dia = "lunes";
+                switch (dia) {
+                    case "lunes":
+                        console.log("Inicio de semana");
+                        break;
+                    default:
+                        console.log("Otro día");
+                }
+            </pre>
+        </div>
         
-        <h3>iii. Estructuras de control</h3>
-        <p>Controlan el flujo del programa: condicionales (`if-else`), bucles (`for`, `while`), y switches.</p>
-        <pre>
-            // Condicional
-            let numero = 10;
-            if (numero > 5) {
-                console.log("Mayor que 5");
-            } else {
-                console.log("Menor o igual a 5");
-            }
-            
-            // Bucle for
-            for (let i = 0; i < 3; i++) {
-                console.log(i); // 0, 1, 2
-            }
-            
-            // Switch
-            let dia = "lunes";
-            switch (dia) {
-                case "lunes":
-                    console.log("Inicio de semana");
-                    break;
-                default:
-                    console.log("Otro día");
-            }
-        </pre>
-    </div>
-
-
-
     <!-- Preguntas de 4 hacia adelante -->
     <!-- FUNCIONES MAP, REDUCE, FILTER -->
     <div class="caja">
@@ -238,6 +257,12 @@
             return false;
         }
     </script>
+
+    <!-- Clase de Conclusion  -->
+    <div class="introducción">
+        <h1>Conclusión</h1>
+        <p> El uso de javascript es una forma de darle mejorar forma a las paginas web para un mejor diseño y una mejor apariencia visual, además, los conceptos de JavaScript como las funciones de orden superior (map, filter, reduce), las clases, el hoisting, la manipulación del DOM y los eventos constituyen la base del desarrollo web moderno. Las funciones permiten trabajar con arreglos de manera más eficiente y declarativa, las clases facilitan la creación de objetos y la organización del código, y el hoisting explica cómo JavaScript interpreta las variables y funciones antes de ejecutar el programa. Además, la manipulación del DOM y el uso de eventos hacen posible crear páginas interactivas, dinámicas y con respuesta inmediata a las acciones del usuario.</p>
+    </div>
 </body>
 
 </html>
