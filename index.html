@@ -1,17 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Intro Javascrip</title>
 </head>
+
 <body>
+    <!-- Anthony Perez, Brandon Arcia -->
 
     <!-- Clase de introducción -->
-     <div class="introducción">
+    <div class="introducción">
         <h1>introducción</h1>
-        <p> El uso de javascript se utiliza para el desarrollo de páginas web más interactivas para el usuario, donde se puede agregar un diseño más moderno y esencial a las páginas web, en este documento se hablará sobre los principales conceptos de JavaScript como se puede mencionar Tipos de datos, operadores, clases, estructuras de control, funciones entre otros.  <br>
-        Donde se mostrarán ejemplos y teoría de cada uno de ellos.</p>
-     </div>
+        <p> El uso de javascript se utiliza para el desarrollo de páginas web más interactivas para el usuario, donde se
+            puede agregar un diseño más moderno y esencial a las páginas web, en este documento se hablará sobre los
+            principales conceptos de JavaScript como se puede mencionar Tipos de datos, operadores, clases, estructuras
+            de control, funciones entre otros. <br>
+            Donde se mostrarán ejemplos y teoría de cada uno de ellos.</p>
+    </div>
 
+    <!-- Preguntas de 4 hacia adelante -->
+    <!-- FUNCIONES MAP, REDUCE, FILTER -->
+    <div class="caja">
+        <h2>IV. Funciones: <code>map()</code>, <code>reduce()</code>, <code>filter()</code></h2>
+        <p>Estas funciones permiten manipular arreglos de forma funcional:</p>
+        <ul>
+            <li><b>map()</b>: Crea un nuevo arreglo aplicando una función a cada elemento.</li>
+            <li><b>filter()</b>: Filtra los elementos que cumplan una condición.</li>
+            <li><b>reduce()</b>: Reduce los elementos a un solo valor (por ejemplo, suma total).</li>
+        </ul>
 
+        <pre>
+            // Ejemplo:
+            const numeros = [1, 2, 3, 4, 5];
+
+            const cuadrados = numeros.map(n => n * n);
+            const pares = numeros.filter(n => n % 2 === 0);
+            const suma = numeros.reduce((total, n) => total + n, 0);
+
+            console.log(cuadrados); // [1, 4, 9, 16, 25]
+            console.log(pares);     // [2, 4]
+            console.log(suma);      // 15
+        </pre>
+    </div>
+
+    <!-- CLASES -->
+    <div class="caja">
+        <h2>V. Clases en JavaScript</h2>
+        <p>Las clases son una forma moderna de definir objetos con propiedades y métodos.</p>
+        <pre>
+            class Persona {
+            constructor(nombre, edad) {
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+
+            saludar() {
+                return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+            }
+            }
+
+            const persona1 = new Persona("Ana", 25);
+            console.log(persona1.saludar());
+        </pre>
+    </div>
+
+    <!-- HOISTING -->
+    <div class="caja">
+        <h2>VI. Hoisting de Variables</h2>
+        <p>El <b>hoisting</b> significa que las declaraciones de variables y funciones se “elevan” al inicio de su
+            contexto.
+            Sin embargo, solo la declaración se eleva, no su asignación.</p>
+
+        <!-- Ejemplo de fragmento de codigo-->
+        <pre>
+            console.log(x); //undefined, porque se eleva la declaración pero no el valor
+            var x = 10;
+
+            saludar(); // Funciona por hoisting de funciones
+            function saludar() {
+            console.log("Hola desde una función elevada!");
+            }
+        </pre>
+    </div>
+
+    <!-- MANIPULACIÓN DEL DOM -->
+    <div class="caja">
+        <h2>VII. Manipulación del DOM</h2>
+        <p>Podemos cambiar el contenido o estilo de elementos HTML usando el DOM.</p>
+
+        <button onclick="cambiarTexto()">Cambiar Texto</button>
+        <p id="demo">Texto original.</p>
+
+        <pre>
+            function cambiarTexto() {
+            const elemento = document.getElementById("demo");
+            elemento.innerHTML = ¡El texto ha cambiado!";
+            elemento.style.color = "green";
+            }
+        </pre>
+    </div>
+
+    <!-- EVENTOS EN JAVASCRIPT -->
+    <div class="caja">
+        <h2>VIII. Eventos en JavaScript</h2>
+        <p>Los eventos permiten responder a acciones del usuario como clics, cambios o envíos de formularios.</p>
+
+        <form onsubmit="return enviarFormulario()">
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" onchange="mostrarCambio()">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p id="mensaje"></p>
+
+        <pre>
+            function mostrarCambio() {
+            document.getElementById("mensaje").innerText = "Se cambió el contenido del campo.";
+            }
+
+            function enviarFormulario() {
+            alert("Formulario enviado correctamente!");
+            return false; // Evita recargar la página
+            }
+        </pre>
+    </div>
+
+    <script>
+        // Código JavaScript que ejecuta ejemplos interactivos:
+        function cambiarTexto() {
+            const elemento = document.getElementById("demo");
+            elemento.innerHTML = "¡El texto ha cambiado!";
+            elemento.style.color = "green";
+        }
+
+        function mostrarCambio() {
+            document.getElementById("mensaje").innerText = "Se cambió el contenido del campo.";
+        }
+
+        function enviarFormulario() {
+            alert("Formulario enviado correctamente!");
+            return false;
+        }
+    </script>
 </body>
+
 </html>
